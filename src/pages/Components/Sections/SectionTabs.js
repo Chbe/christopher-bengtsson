@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 // @material-ui/icons
 import Face from "@material-ui/icons/Face";
-import Chat from "@material-ui/icons/Chat";
+import Timeline from "@material-ui/icons/Timeline";
 import Build from "@material-ui/icons/Build";
 // core components
 import GridContainer from "../../../components/Grid/GridContainer.js";
@@ -40,35 +40,32 @@ export default function SectionTabs() {
                         were supposed to develop an hybrid mobile application with Ionic 2. So it's
                         fair to say I started to learn JavaScript through Angular 2 (... yeah I know).
                         We got the hang of it pretty and the usage of interpolation blew our minds.
-                        <i>"This is so much better than that jQuery course"</i>
+                        <i>"This is so much better than that jQuery course" </i>
                       </p>
                     )
                   },
                   {
-                    tabName: "Messages",
-                    tabIcon: Chat,
+                    tabName: "Envolving",
+                    tabIcon: Timeline,
                     tabContent: (
                       <p className={classes.textCenter}>
                         I've always had an interest of programming, so of course I continued coding
                         Ionic applications on my free time. Writing code in Typescript and Angular felt natural
-                        coming from my pretty C#-focused education, structruring the code
+                        coming from my pretty C# focused education, structruring the code
                         in a some what MVC fashion made sence even here.
                       </p>
                     )
                   },
                   {
-                    tabName: "Settings",
+                    tabName: "Use",
                     tabIcon: Build,
                     tabContent: (
                       <p className={classes.textCenter}>
-                        think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. So when you get something that has
-                        the name Kanye West on it, it’s supposed to be pushing
-                        the furthest possibilities. I will be the leader of a
-                        company that ends up being worth billions of dollars,
-                        because I got the answers. I understand culture. I am
-                        the nucleus.
+                        The lazy part of me really like Angular since it has more functionality
+                        out of the box, I don't have to think about what routing library to use and
+                        all these short terminal commands just makes life a little bit easier.
+                        <i>ng add @angular/pwa </i>. Boom, now you have a PWA, kinda. Having large
+                        projects that will scale, Angular will be there for me.
                       </p>
                     )
                   }
@@ -92,31 +89,37 @@ export default function SectionTabs() {
                         <i>What is this hipster s***, writing HTML, CSS and JavaScript in one file?? </i>
                         I was even coding in StencilJS before gicing React a real chance. Haven't
                          heard of it? Exactly. But after playing around with StencilJS
-                        and getting the idea of states and props, it turned out that JSX wasn't 
+                        and getting the idea of states and props, it turned out that JSX wasn't
                         that bad after all...
                       </p>
                     )
                   },
                   {
-                    tabName: "Updates",
+                    tabName: "Envolving",
+                    tabIcon: Timeline,
                     tabContent: (
                       <p className={classes.textCenter}>
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. I will be the leader of a company
-                        that ends up being worth billions of dollars, because I
-                        got the answers. I understand culture. I am the nucleus.
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at.
+                        I think fair to say that Angular have a steeper learning
+                        curve than React. But, I also believe you have to be a more
+                        experienced developer before you can code more complex React
+                        applications. Here you kinda have to figure out the "M" and the "C"
+                        in MVC by yourself. React doesn't offer as strong opinions about
+                        how the projects should be structured.
                       </p>
                     )
                   },
                   {
-                    tabName: "History",
+                    tabName: "Use",
+                    tabIcon: Build,
                     tabContent: (
                       <p className={classes.textCenter}>
-                        
+                        Maybe I wasn't so wrong about calling React a
+                        hipster framework after all... <br />
+                        But here everything just works. No struggling with modules, you make
+                        a component and then you use it, dead simple. Somehow, maybe because
+                        of this, it makes more sence creating reusable components in React.
+                        <i>Yes I know, Angular is component based, shhh. </i>
+                        I'm even turned, JSX is awesome. Styled components are awesome. React. Is. Awesome. 
                       </p>
                     )
                   }

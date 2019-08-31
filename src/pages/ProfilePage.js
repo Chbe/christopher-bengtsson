@@ -15,6 +15,7 @@ import profile from '../assets/img/faces/me_cafe.jpg';
 import styles from '../assets/jss/material-kit-react/views/profilePage.js';
 import SectionPills from './Components/Sections/SectionPills';
 import SectionTabs from "./Components/Sections/SectionTabs";
+import SectionMeasure from "./Components/Sections/SectionMeasure";
 
 const useStyles = makeStyles(styles);
 
@@ -86,16 +87,12 @@ const ProfilePage = (props) => {
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. {' '}
+                                laboris nisi ut aliquip ex ea commodo consequat. {' '}
                             </p>
                         </div>
-                        {/* <GridContainer justify='center'>
-                            <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
-                                <SectionPills />
-                            </GridItem>
-                        </GridContainer> */}
                     </div>
                 </div>
+                <SectionMeasure />
                 <SectionTabs />
                 <SectionPills />
             </div>

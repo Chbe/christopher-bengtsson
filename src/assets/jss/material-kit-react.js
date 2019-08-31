@@ -78,6 +78,8 @@ const roseColor = "#e91e63";
 const grayColor = "#999999";
 const reactColor = "#61dbfb";
 const angularColor = "#B52E31";
+const javascriptColor = "#f0db4f";
+const typescriptColor = "#007acc";
 
 const primaryBoxShadow = {
   boxShadow:
@@ -217,6 +219,8 @@ export {
   grayColor,
   reactColor,
   angularColor,
+  javascriptColor,
+  typescriptColor,
   primaryBoxShadow,
   infoBoxShadow,
   successBoxShadow,
