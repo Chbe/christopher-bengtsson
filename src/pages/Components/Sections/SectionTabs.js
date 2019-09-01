@@ -31,7 +31,6 @@ export default function SectionTabs() {
                 headerColor="angular"
                 tabs={[
                   {
-                    tabName: "First encounter",
                     tabIcon: Face,
                     tabContent: (
                       <p className={classes.textCenter}>
@@ -45,7 +44,6 @@ export default function SectionTabs() {
                     )
                   },
                   {
-                    tabName: "Envolving",
                     tabIcon: Timeline,
                     tabContent: (
                       <p className={classes.textCenter}>
@@ -57,7 +55,6 @@ export default function SectionTabs() {
                     )
                   },
                   {
-                    tabName: "Use",
                     tabIcon: Build,
                     tabContent: (
                       <p className={classes.textCenter}>
@@ -80,7 +77,6 @@ export default function SectionTabs() {
                 headerColor="react"
                 tabs={[
                   {
-                    tabName: "First encounter",
                     tabIcon: Face,
                     tabContent: (
                       <p className={classes.textCenter}>
@@ -95,7 +91,6 @@ export default function SectionTabs() {
                     )
                   },
                   {
-                    tabName: "Envolving",
                     tabIcon: Timeline,
                     tabContent: (
                       <p className={classes.textCenter}>
@@ -109,7 +104,6 @@ export default function SectionTabs() {
                     )
                   },
                   {
-                    tabName: "Use",
                     tabIcon: Build,
                     tabContent: (
                       <p className={classes.textCenter}>
@@ -119,7 +113,7 @@ export default function SectionTabs() {
                         a component and then you use it, dead simple. Somehow, maybe because
                         of this, it makes more sence creating reusable components in React.
                         <i>Yes I know, Angular is component based, shhh. </i>
-                        I'm even turned, JSX is awesome. Styled components are awesome. React. Is. Awesome. 
+                        I'm even turned, JSX is awesome. Styled components are awesome. React. Is. Awesome.
                       </p>
                     )
                   }

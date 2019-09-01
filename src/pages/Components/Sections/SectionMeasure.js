@@ -14,20 +14,45 @@ import styles from "../../../assets/jss/material-kit-react/views/componentsSecti
 
 const useStyles = makeStyles(styles);
 
+const skillsArr = [
+    {
+        name: 'Javascript',
+        lvl: 80
+    },
+    {
+        name: 'Typescript',
+        lvl: 70
+    },
+    {
+        name: 'React',
+        lvl: 70
+    },
+    {
+        name: 'Angular',
+        lvl: 65
+    }
+];
+const todosArr = [
+    {
+        name: 'UX Certificate',
+        checked: false
+    },
+    {
+        name: 'Check out Vue.js',
+        checked: false
+    },
+    {
+        name: 'Learn the Cyrillic alphabet',
+        checked: true
+    },
+    {
+        name: 'Understand the React fanboys',
+        checked: true
+    }
+];
 export default function SectionBasics() {
     const classes = useStyles();
-    const [checked, setChecked] = React.useState([24, 22]);
-    const handleToggle = value => {
-        const currentIndex = checked.indexOf(value);
-        const newChecked = [...checked];
 
-        if (currentIndex === -1) {
-            newChecked.push(value);
-        } else {
-            newChecked.splice(currentIndex, 1);
-        }
-        setChecked(newChecked);
-    };
     return (
         <div className={classes.sections}>
             <div className={classes.container}>
@@ -41,134 +66,49 @@ export default function SectionBasics() {
                             <div className={classes.title}>
                                 <h3>Skills</h3>
                             </div>
-                            <span>Javascript</span>
-                            <CustomLinearProgress
-                                variant="determinate"
-                                color="javascript"
-                                value={80}
-                            />
-                            <span>Typescript</span>
-                            <CustomLinearProgress
-                                variant="determinate"
-                                color="typescript"
-                                value={70}
-                            />
-                            <span>React</span>
-                            <CustomLinearProgress
-                                variant="determinate"
-                                color="react"
-                                value={70}
-                            />
-                            <span>Angular</span>
-                            <CustomLinearProgress
-                                variant="determinate"
-                                color="angular"
-                                value={70}
-                            />
+                            {skillsArr.map(skill => {
+                                return <>
+                                    <span>{skill.name}</span>
+                                    <CustomLinearProgress
+                                        variant="determinate"
+                                        color={skill.name.toLocaleLowerCase()}
+                                        value={skill.lvl}
+                                    />
+                                </>
+                            })}
                         </GridItem>
                         <GridItem xs={12} sm={6} md={4} lg={3}>
                             <div className={classes.title}>
                                 <h3>TODO</h3>
                             </div>
-                            <div
-                                className={
-                                    classes.checkboxAndRadio +
-                                    " " +
-                                    classes.checkboxAndRadioHorizontal
-                                }
-                            >
-                                <FormControlLabel
-                                    control={
-                                        <Checkbox
-                                            tabIndex={-1}
-                                            onClick={() => handleToggle(21)}
-                                            checkedIcon={<Check className={classes.checkedIcon} />}
-                                            icon={<Check className={classes.uncheckedIcon} />}
-                                            classes={{
-                                                checked: classes.checked,
-                                                root: classes.checkRoot
-                                            }}
+                            {todosArr.map((todo, index) => {
+                                return <>
+                                    <div
+                                        className={
+                                            classes.checkboxAndRadio +
+                                            " " +
+                                            classes.checkboxAndRadioHorizontal
+                                        }
+                                    >
+                                        <FormControlLabel
+                                            control={
+                                                <Checkbox
+                                                    tabIndex={-1}
+                                                    checkedIcon={<Check className={classes.checkedIcon} />}
+                                                    icon={<Check className={classes.uncheckedIcon} />}
+                                                    classes={{
+                                                        checked: classes.checked,
+                                                        root: classes.checkRoot
+                                                    }}
+                                                    checked={todo.checked}
+                                                />
+                                            }
+                                            classes={{ label: classes.label, root: classes.labelRoot }}
+                                            label={todo.name}
                                         />
-                                    }
-                                    classes={{ label: classes.label, root: classes.labelRoot }}
-                                    label="UX certificate"
-                                />
-                            </div>
-                            <div
-                                className={
-                                    classes.checkboxAndRadio +
-                                    " " +
-                                    classes.checkboxAndRadioHorizontal
-                                }
-                            >
-                                <FormControlLabel
-                                    control={
-                                        <Checkbox
-                                            tabIndex={-1}
-                                            onClick={() => handleToggle(22)}
-                                            checked={checked.indexOf(22) !== -1 ? true : false}
-                                            checkedIcon={<Check className={classes.checkedIcon} />}
-                                            icon={<Check className={classes.uncheckedIcon} />}
-                                            classes={{
-                                                checked: classes.checked,
-                                                root: classes.checkRoot
-                                            }}
-                                        />
-                                    }
-                                    classes={{ label: classes.label, root: classes.labelRoot }}
-                                    label="Learn the Cyrillic alphabet"
-                                />
-                            </div>
-                            <div
-                                className={
-                                    classes.checkboxAndRadio +
-                                    " " +
-                                    classes.checkboxAndRadioHorizontal
-                                }
-                            >
-                                <FormControlLabel
-                                    control={
-                                        <Checkbox
-                                            tabIndex={-1}
-                                            onClick={() => handleToggle(23)}
-                                            checked={checked.indexOf(23) !== -1 ? true : false}
-                                            checkedIcon={<Check className={classes.checkedIcon} />}
-                                            icon={<Check className={classes.uncheckedIcon} />}
-                                            classes={{
-                                                checked: classes.checked,
-                                                root: classes.checkRoot
-                                            }}
-                                        />
-                                    }
-                                    classes={{ label: classes.label, root: classes.labelRoot }}
-                                    label="Checkout Vue.js"
-                                />
-                            </div>
-                            <div
-                                className={
-                                    classes.checkboxAndRadio +
-                                    " " +
-                                    classes.checkboxAndRadioHorizontal
-                                }
-                            >
-                                <FormControlLabel
-                                    control={
-                                        <Checkbox
-                                            tabIndex={-1}
-                                            onClick={() => handleToggle(24)}
-                                            checked={checked.indexOf(24) !== -1 ? true : false}
-                                            checkedIcon={<Check className={classes.checkedIcon} />}
-                                            icon={<Check className={classes.uncheckedIcon} />}
-                                            classes={{
-                                                checked: classes.checked,
-                                                root: classes.checkRoot
-                                            }}
-                                        />
-                                    }
-                                    classes={{ label: classes.label, root: classes.labelRoot }}
-                                    label="Learn to appreciate React"
-                                />
-                            </div>
+                                    </div>
+                                </>
+                            })}
                         </GridItem>
                     </GridContainer>
                 </div>
